@@ -10,4 +10,15 @@ public class QuestionPickList extends Question{
         super(id, description);
         this.options = options;
     }
+
+    public List<String> getOptions() {
+        return options;
+    }
+
+    public boolean nullOrBlankOptions(){
+        for(String str: this.options){
+            return str.isBlank();
+        }
+        return false;
+    }
 }

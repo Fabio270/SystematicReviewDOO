@@ -10,4 +10,12 @@ public abstract class Question {
         this.id = id;
         this.description = description;
     }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public String getDescription() {
+        return description;
+    }
 }
