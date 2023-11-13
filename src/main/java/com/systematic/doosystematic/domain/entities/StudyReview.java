@@ -76,4 +76,20 @@ public class StudyReview {
     public List<Answer> getAnswers() {
         return answers;
     }
+
+    public void setBases(List<Base> bases) {
+        this.bases = bases;
+    }
+
+    public void setStatusStage1(Enum<Stage1> statusStage1) {
+        this.statusStage1 = statusStage1;
+    }
+
+    public void setStatusStage2(Enum<Stage2> statusStage2) {
+        this.statusStage2 = statusStage2;
+    }
+
+    public void setAnswers(List<Answer> answers) {
+        this.answers = answers;
+    }
 }
