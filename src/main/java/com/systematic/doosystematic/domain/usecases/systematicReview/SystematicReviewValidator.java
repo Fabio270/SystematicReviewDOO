@@ -15,7 +15,6 @@ public class SystematicReviewValidator extends Validator<SystematicReview> {
         }
         if (nullOrEmpty(systematicReview.getName())) notification.addError("Name is null or empty.");
         if (nullOrEmpty(systematicReview.getDescription())) notification.addError("Description is null or empty.");
-
         return null;
     }
 }

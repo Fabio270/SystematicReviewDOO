@@ -22,11 +22,10 @@ public class SystematicReview {
         this.bases = bases;
     }
 
-    public SystematicReview(UUID id, String name, String description, List<Base> bases) {
+    public SystematicReview(UUID id, String name, String description) {
         this.id = id;
         this.name = name;
         this.description = description;
-        this.bases = bases;
     }
 
     public UUID getId() {
@@ -51,5 +50,9 @@ public class SystematicReview {
 
     public List<Statistic> getStatistics() {
         return statistics;
+    }
+
+    public List<Base> getBases() {
+        return bases;
     }
 }
