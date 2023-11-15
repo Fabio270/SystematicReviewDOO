@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.UUID;
 
 public class Protocol {
-    private UUID systematicReviewId;
+    private UUID uuid;
     private String description;
     private List<Base> bases;
     private String searchString;
@@ -12,8 +12,8 @@ public class Protocol {
     private List<Criteria> inclusionCriteria;
     private List<Criteria> exclusionCriteria;
 
-    public Protocol(UUID systematicReviewId, String description, List<Base> bases, String searchString, List<Question> form, List<Criteria> inclusionCriteria, List<Criteria> exclusionCriteria) {
-        this.systematicReviewId = systematicReviewId;
+    public Protocol(UUID uuid, String description, List<Base> bases, String searchString, List<Question> form, List<Criteria> inclusionCriteria, List<Criteria> exclusionCriteria) {
+        this.uuid = uuid;
         this.description = description;
         this.bases = bases;
         this.searchString = searchString;
@@ -22,8 +22,8 @@ public class Protocol {
         this.exclusionCriteria = exclusionCriteria;
     }
 
-    public UUID getSystematicReviewId() {
-        return systematicReviewId;
+    public UUID getUuid() {
+        return uuid;
     }
 
     public String getDescription() {
