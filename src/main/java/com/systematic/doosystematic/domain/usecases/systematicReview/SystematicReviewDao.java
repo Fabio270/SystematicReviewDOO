@@ -12,4 +12,7 @@ public interface SystematicReviewDao extends DAO<SystematicReview, UUID>{
     boolean addBase(Base base);
     boolean deleteStudyReview(StudyReview studyReview);
     Optional<StudyReview> findOneStudyReview(UUID studyReviewId);
+
+    boolean deleteBase(Base base);
+    Optional<Base> findOneBase(String baseName);
 }
