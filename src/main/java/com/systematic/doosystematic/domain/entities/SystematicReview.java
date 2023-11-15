@@ -55,4 +55,32 @@ public class SystematicReview {
     public List<Base> getBases() {
         return bases;
     }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setProtocol(Protocol protocol) {
+        this.protocol = protocol;
+    }
+
+    public void setStudies(List<StudyReview> studies) {
+        this.studies = studies;
+    }
+
+    public void setStatistics(List<Statistic> statistics) {
+        this.statistics = statistics;
+    }
+
+    public void setBases(List<Base> bases) {
+        this.bases = bases;
+    }
 }
