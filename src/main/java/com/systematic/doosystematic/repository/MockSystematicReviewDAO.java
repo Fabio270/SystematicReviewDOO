@@ -28,6 +28,26 @@ public class MockSystematicReviewDAO implements SystematicReviewDao {
     }
 
     @Override
+    public boolean deleteStudyReview(StudyReview studyReview) {
+        return false;
+    }
+
+    @Override
+    public Optional<StudyReview> findOneStudyReview(UUID studyReviewId) {
+        return Optional.empty();
+    }
+
+    @Override
+    public boolean deleteBase(Base base) {
+        return false;
+    }
+
+    @Override
+    public Optional<Base> findOneBase(String baseName) {
+        return Optional.empty();
+    }
+
+    @Override
     public UUID create(SystematicReview type) {
         return null;
     }
