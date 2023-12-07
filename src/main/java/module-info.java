@@ -7,6 +7,6 @@ module com.systematic.doosystematic {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
 
-    opens com.systematic.doosystematic to javafx.fxml;
+    opens com.systematic.doosystematic;
     exports com.systematic.doosystematic;
 }

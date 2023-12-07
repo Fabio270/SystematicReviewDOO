@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.systematic.doosystematic.ProtocoloView">
+   <children>
+      <TextField fx:id="txtTitulo" layoutX="159.0" layoutY="95.0" prefHeight="26.0" prefWidth="377.0" />
+      <Label layoutX="82.0" layoutY="95.0" text="Título:">
+         <font>
+            <Font name="Book Antiqua" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDescricao" layoutX="185.0" layoutY="139.0" prefHeight="26.0" prefWidth="352.0" />
+      <Label layoutX="83.0" layoutY="139.0" text="Descrição:">
+         <font>
+            <Font name="Book Antiqua" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtBusca" layoutX="237.0" layoutY="183.0" prefHeight="26.0" prefWidth="298.0" />
+      <Label layoutX="84.0" layoutY="183.0" text="String de Busca:">
+         <font>
+            <Font name="Book Antiqua" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnInclusao" layoutX="119.0" layoutY="305.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0">
+         <graphic>
+            <ImageView fitHeight="37.0" fitWidth="37.0">
+               <image>
+                  <Image url="@images/plus.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="66.0" layoutY="234.0" text="Critérios de inclusão:">
+         <font>
+            <Font name="Book Antiqua" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnNextQuestions" layoutX="487.0" layoutY="334.0" mnemonicParsing="false" prefWidth="46.0">
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="34.0">
+               <image>
+                  <Image url="@images/arrow-next.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="65.0" layoutY="31.0" text="Protocolo">
+         <font>
+            <Font name="Book Antiqua" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="61.0" text="Etapa: planejamento">
+         <font>
+            <Font name="Book Antiqua" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="325.0" layoutY="234.0" text="Critérios de exclusão:">
+         <font>
+            <Font name="Book Antiqua" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtInclusao" layoutX="65.0" layoutY="271.0" prefHeight="26.0" prefWidth="174.0" />
+      <TextField fx:id="txtExclusao" layoutX="333.0" layoutY="271.0" prefHeight="26.0" prefWidth="174.0" />
+      <Button fx:id="btnExclusao" layoutX="394.0" layoutY="305.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0">
+         <graphic>
+            <ImageView fitHeight="37.0" fitWidth="37.0">
+               <image>
+                  <Image url="@images/plus.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

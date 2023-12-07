@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.systematic.doosystematic.Filtragem1">
+   <children>
+      <Label layoutX="81.0" layoutY="41.0" text="Filtragem 1">
+         <font>
+            <Font name="Book Antiqua" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="85.0" layoutY="81.0" text="Etapa: execução">
+         <font>
+            <Font name="Book Antiqua" size="12.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#94949440" height="241.0" layoutX="64.0" layoutY="103.0" stroke="BLACK" strokeType="INSIDE" width="493.0" />
+      <Label layoutX="76.0" layoutY="110.0" text="Título:">
+         <font>
+            <Font name="Book Antiqua" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="76.0" layoutY="146.0" text="Resumo:">
+         <font>
+            <Font name="Book Antiqua" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbResumo" layoutX="76.0" layoutY="172.0" prefHeight="113.0" prefWidth="462.0" text="--">
+         <font>
+            <Font name="Book Antiqua" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbTitulo" layoutX="142.0" layoutY="110.0" prefHeight="26.0" prefWidth="387.0" text="--">
+         <font>
+            <Font name="Book Antiqua" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnNextFiltragem2" layoutX="507.0" layoutY="354.0" mnemonicParsing="false" prefWidth="46.0">
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="34.0">
+               <image>
+                  <Image url="@images/arrow-next.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnAceitar" layoutX="157.0" layoutY="288.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0">
+         <graphic>
+            <ImageView fitHeight="37.0" fitWidth="37.0">
+               <image>
+                  <Image url="@images/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnRecusar" layoutX="390.0" layoutY="288.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0">
+         <graphic>
+            <ImageView fitHeight="37.0" fitWidth="37.0">
+               <image>
+                  <Image url="@images/x-mark.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
