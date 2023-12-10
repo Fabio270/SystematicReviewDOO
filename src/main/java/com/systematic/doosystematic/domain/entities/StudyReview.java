@@ -5,6 +5,7 @@ import java.util.UUID;
 
 public class StudyReview {
     private UUID id;
+    private UUID systematicReviewId;
     private String title;
     private String resumo;
     private String text;
@@ -15,8 +16,9 @@ public class StudyReview {
     private Enum<Stage2> statusStage2;
     private List<Answer> answers;
 
-    public StudyReview(UUID id, String title, String resumo, String text, String authors, String keywords, List<Base> bases, Enum<Stage1> statusStage1, List<Answer> answers) {
+    public StudyReview(UUID id, UUID systematicReviewId, String title, String resumo, String text, String authors, String keywords, List<Base> bases, Enum<Stage1> statusStage1, List<Answer> answers) {
         this.id = id;
+        this.systematicReviewId = systematicReviewId;
         this.title = title;
         this.resumo = resumo;
         this.text = text;
@@ -25,16 +27,6 @@ public class StudyReview {
         this.bases = bases;
         this.statusStage1 = statusStage1;
         this.answers = answers;
-    }
-
-    public StudyReview(UUID id, String title, String resumo, String text, String authors, String keywords, List<Base> bases) {
-        this.id = id;
-        this.title = title;
-        this.resumo = resumo;
-        this.text = text;
-        this.authors = authors;
-        this.keywords = keywords;
-        this.bases = bases;
     }
 
     public UUID getId() {
@@ -91,5 +83,13 @@ public class StudyReview {
 
     public void setAnswers(List<Answer> answers) {
         this.answers = answers;
+    }
+
+    public UUID getSystematicReviewId() {
+        return systematicReviewId;
+    }
+
+    public void setSystematicReviewId(UUID systematicReviewId) {
+        this.systematicReviewId = systematicReviewId;
     }
 }
