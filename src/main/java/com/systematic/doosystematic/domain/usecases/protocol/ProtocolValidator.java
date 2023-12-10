@@ -15,7 +15,6 @@ public class ProtocolValidator extends Validator<Protocol> {
 
         if (nullOrEmpty(protocol.getDescription())) notification.addError("Description is null or empty.");
         if (nullOrEmpty(protocol.getSearchString())) notification.addError("SearchString is null or empty.");
-        if (protocol.getBases().isEmpty()) notification.addError("Bases is empty.");
         if (protocol.getForm().isEmpty()) notification.addError("Form is empty.");
         if (protocol.getExclusionCriteria().isEmpty()) notification.addError("ExclusionCriteria is empty.");
         if (protocol.getInclusionCriteria().isEmpty()) notification.addError("Inclusion criteria is empty.");

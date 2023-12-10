@@ -6,16 +6,14 @@ import java.util.UUID;
 public class Protocol {
     private UUID uuid;
     private String description;
-    private List<Base> bases;
     private String searchString;
     private List<Question> form;
     private List<Criteria> inclusionCriteria;
     private List<Criteria> exclusionCriteria;
 
-    public Protocol(UUID uuid, String description, List<Base> bases, String searchString, List<Question> form, List<Criteria> inclusionCriteria, List<Criteria> exclusionCriteria) {
+    public Protocol(UUID uuid, String description, String searchString, List<Question> form, List<Criteria> inclusionCriteria, List<Criteria> exclusionCriteria) {
         this.uuid = uuid;
         this.description = description;
-        this.bases = bases;
         this.searchString = searchString;
         this.form = form;
         this.inclusionCriteria = inclusionCriteria;
@@ -28,10 +26,6 @@ public class Protocol {
 
     public String getDescription() {
         return description;
-    }
-
-    public List<Base> getBases() {
-        return bases;
     }
 
     public String getSearchString() {
