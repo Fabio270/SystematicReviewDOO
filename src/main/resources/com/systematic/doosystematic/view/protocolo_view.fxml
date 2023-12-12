@@ -33,7 +33,7 @@
          <graphic>
             <ImageView fitHeight="37.0" fitWidth="37.0">
                <image>
-                  <Image url="@images/plus.png" />
+                  <Image url="@../images/plus.png" />
                </image>
             </ImageView>
          </graphic>
@@ -47,7 +47,7 @@
          <graphic>
             <ImageView fitHeight="26.0" fitWidth="34.0">
                <image>
-                  <Image url="@images/arrow-next.png" />
+                  <Image url="@../images/arrow-next.png" />
                </image>
             </ImageView>
          </graphic>
@@ -73,7 +73,7 @@
          <graphic>
             <ImageView fitHeight="37.0" fitWidth="37.0">
                <image>
-                  <Image url="@images/plus.png" />
+                  <Image url="@../images/plus.png" />
                </image>
             </ImageView>
          </graphic>

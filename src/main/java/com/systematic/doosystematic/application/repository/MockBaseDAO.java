@@ -1,4 +1,4 @@
-package com.systematic.doosystematic.repository;
+package com.systematic.doosystematic.application.repository;
 
 import com.systematic.doosystematic.domain.entities.Base;
 import com.systematic.doosystematic.domain.usecases.bases.BasesDAO;
