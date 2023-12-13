@@ -13,7 +13,7 @@ public class MockSystematicReviewDAO implements SystematicReviewDao {
 
 
     @Override
-    public boolean assingProtocol(Protocol protocol) {
+    public boolean assingProtocol(SystematicReview systematicReview) {
         return false;
     }
 
