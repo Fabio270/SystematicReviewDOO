@@ -15,11 +15,6 @@ public class QuickStart {
 
         // Replace the placeholder with your MongoDB deployment's connection string
 
-
-        try (MongoClient mongoClient = MongoClients.create(uri)) {
-            MongoDatabase database = mongoClient.getDatabase("systematic");
-            MongoCollection<Document> collection = database.getCollection("systematicreview");
-
 //            Document document = new Document("name","Daeshan");
 //            document.append("sex", "male");
 //            document.append("age", "21");
