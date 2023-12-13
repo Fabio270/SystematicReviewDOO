@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 
 public class StudyReview {
     private UUID id;
+    private UUID systematicReviewId;
     private String title;
     private String resumo;
     private String text;
@@ -18,8 +19,9 @@ public class StudyReview {
     private Enum<Stage2> statusStage2;
     private List<Answer> answers;
 
-    public StudyReview(UUID id, String title, String resumo, String text, String authors, String keywords, List<Base> bases, Enum<Stage1> statusStage1, List<Answer> answers) {
+    public StudyReview(UUID id, UUID systematicReviewId, String title, String resumo, String text, String authors, String keywords, List<Base> bases, Enum<Stage1> statusStage1, List<Answer> answers) {
         this.id = id;
+        this.systematicReviewId = systematicReviewId;
         this.title = title;
         this.resumo = resumo;
         this.text = text;
@@ -68,7 +70,7 @@ public class StudyReview {
         this.keywords = keywords;
         this.bases = bases;
     }
-
+    
     public UUID getId() {
         return id;
     }
@@ -123,5 +125,13 @@ public class StudyReview {
 
     public void setAnswers(List<Answer> answers) {
         this.answers = answers;
+    }
+
+    public UUID getSystematicReviewId() {
+        return systematicReviewId;
+    }
+
+    public void setSystematicReviewId(UUID systematicReviewId) {
+        this.systematicReviewId = systematicReviewId;
     }
 }

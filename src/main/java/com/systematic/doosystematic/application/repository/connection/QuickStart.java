@@ -1,4 +1,4 @@
-package com.systematic.doosystematic.connection;
+package com.systematic.doosystematic.application.repository.connection;
 
 import static com.mongodb.client.model.Filters.eq;
 
@@ -30,7 +30,5 @@ public class QuickStart {
 //                collection.updateOne(found, updateoperation);
 //                System.out.println("user updated");
 
-            }
-        }
     }
 }

@@ -1,4 +1,4 @@
-package com.systematic.doosystematic.repository;
+package com.systematic.doosystematic.application.repository;
 
 import com.systematic.doosystematic.domain.entities.Base;
 import com.systematic.doosystematic.domain.entities.Protocol;
@@ -13,7 +13,7 @@ public class MockSystematicReviewDAO implements SystematicReviewDao {
 
 
     @Override
-    public boolean assingProtocol(Protocol protocol) {
+    public boolean assingProtocol(SystematicReview systematicReview) {
         return false;
     }
 

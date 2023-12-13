@@ -13,4 +13,9 @@ module com.systematic.doosystematic {
 
     opens com.systematic.doosystematic;
     exports com.systematic.doosystematic;
+    exports com.systematic.doosystematic.application.view;
+    exports com.systematic.doosystematic.application.controller to javafx.fxml;
+    opens com.systematic.doosystematic.application.view.images;
+    opens com.systematic.doosystematic.application.view;
+    opens com.systematic.doosystematic.application.controller to javafx.fxml;
 }
