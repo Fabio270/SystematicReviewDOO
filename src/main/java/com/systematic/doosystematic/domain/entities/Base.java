@@ -2,24 +2,29 @@ package com.systematic.doosystematic.domain.entities;
 
 import org.bson.Document;
 
+import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 public class Base {
     private String name;
     private UUID systematicReviewId;
+    private List<Article> articles;
 
-    private String link;
-
-    public Base(String name, UUID systematicReviewId,String link) {
+    public Base(String name, UUID systematicReviewId, List<Article> articles) {
         this.name = name;
         this.systematicReviewId=systematicReviewId;
-        this.link = link;
+        this.articles = articles;
     }
 
     public Document toJson() {
         Document document = new Document("name", name)
-                .append("systematicReviewId", systematicReviewId.toString())
-                .append("link", link);
+                .append("systematicReviewId", systematicReviewId.toString());
+
+        List<Document> articleDocuments = articles.stream()
+                .map(Article::toJson)
+                .collect(Collectors.toList());
+        document.append("answers", articleDocuments);
 
         return document;
     }
@@ -28,16 +33,8 @@ public class Base {
         return name;
     }
 
-    public String getLink() {
-        return link;
-    }
-
     public void setName(String name) {
         this.name = name;
-    }
-
-    public void setLink(String link) {
-        this.link = link;
     }
 
     public UUID getSystematicReviewId() {
@@ -46,5 +43,13 @@ public class Base {
 
     public void setSystematicReviewId(UUID systematicReviewId) {
         this.systematicReviewId = systematicReviewId;
+    }
+
+    public List<Article> getArticles() {
+        return articles;
+    }
+
+    public void setArticles(List<Article> articles) {
+        this.articles = articles;
     }
 }

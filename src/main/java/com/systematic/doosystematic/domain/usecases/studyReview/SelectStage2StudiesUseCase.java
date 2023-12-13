@@ -1,5 +1,6 @@
 package com.systematic.doosystematic.domain.usecases.studyReview;
 
+import com.systematic.doosystematic.domain.entities.Article;
 import com.systematic.doosystematic.domain.entities.Stage1;
 import com.systematic.doosystematic.domain.entities.Stage2;
 import com.systematic.doosystematic.domain.entities.StudyReview;
@@ -19,8 +20,8 @@ public class SelectStage2StudiesUseCase {
         List<StudyReview> acceptedArticles = articlesFromDatabases.stream()
                 .filter(article -> article.getStatusStage1() == Stage1.ACCEPTED)
                 .collect(Collectors.toList());
-        for (StudyReview article : acceptedArticles) {
-            displayArticleDetails(article);
+        for (StudyReview studyReview : acceptedArticles) {
+            displayArticleDetails(null);
 
 
         }
@@ -30,7 +31,7 @@ public class SelectStage2StudiesUseCase {
         return null;
     }
 
-    private void displayArticleDetails(StudyReview article) {
+    private void displayArticleDetails(Article article) {
         System.out.println("\nTítulo: " + article.getTitle() +
                         "\nResumo: " + article.getResumo() +
                         "\nAuthors: " + article.getAuthors() +
