@@ -7,7 +7,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 public interface SystematicReviewDao extends DAO<SystematicReview, UUID>{
-    boolean assingProtocol(Protocol protocol);
+    boolean assingProtocol(SystematicReview systematicReview);
     boolean addStudyReview(StudyReview studyReview);
     boolean addBase(Base base);
     boolean deleteStudyReview(StudyReview studyReview);

@@ -24,7 +24,7 @@ public class UpdateProtocolUseCase {
 
         systematicReview.setProtocol(newProtocol);
 
-        return dao.assingProtocol(systematicReview.getProtocol());
+        return dao.assingProtocol(systematicReview);
     }
 }
 

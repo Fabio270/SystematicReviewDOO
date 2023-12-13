@@ -1,7 +1,10 @@
 package com.systematic.doosystematic.domain.entities;
 
+import org.bson.Document;
+
 import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 public class Protocol {
     private UUID uuid;
@@ -20,6 +23,29 @@ public class Protocol {
         this.form = form;
         this.inclusionCriteria = inclusionCriteria;
         this.exclusionCriteria = exclusionCriteria;
+    }
+
+    public Document toJson(){
+        Document document = new Document("uuid", uuid.toString());
+        document.append("description", description);
+        document.append("searchString", searchString);
+
+        List<Document> formDocuments = form.stream()
+                .map(Question::toJson)
+                .collect(Collectors.toList());
+        document.append("form", formDocuments);
+
+        List<Document> inclusionCriteriaDocuments = inclusionCriteria.stream()
+                .map(Criteria::toJson)
+                .collect(Collectors.toList());
+        document.append("inclusionCriteria", inclusionCriteriaDocuments);
+
+        List<Document> exclusionCriteriaDocuments = exclusionCriteria.stream()
+                .map(Criteria::toJson)
+                .collect(Collectors.toList());
+        document.append("exclusionCriteria", exclusionCriteriaDocuments);
+
+        return document;
     }
 
     public UUID getUuid() {

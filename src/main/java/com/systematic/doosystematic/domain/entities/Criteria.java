@@ -1,5 +1,7 @@
 package com.systematic.doosystematic.domain.entities;
 
+import org.bson.Document;
+
 import java.util.UUID;
 
 public class Criteria {
@@ -13,6 +15,14 @@ public class Criteria {
         this.systematicReviewId = systematicReviewId;
         this.description = description;
         this.type = type;
+    }
+
+    public Document toJson() {
+        Document document = new Document("id", id.toString());
+        document.append("description", description);
+        document.append("type", type);
+
+        return document;
     }
 
     public UUID getId() {

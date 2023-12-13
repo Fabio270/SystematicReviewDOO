@@ -1,7 +1,10 @@
 package com.systematic.doosystematic.domain.entities;
 
+import org.bson.Document;
+
 import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 public class StudyReview {
     private UUID id;
@@ -29,6 +32,45 @@ public class StudyReview {
         this.answers = answers;
     }
 
+    public Document toJson() {
+        Document document = new Document("id", id.toString())
+                .append("title", title)
+                .append("resumo", resumo)
+                .append("text", text)
+                .append("authors", authors)
+                .append("keywords", keywords);
+
+        List<Document> basesDocuments = bases.stream()
+                .map(Base::toJson)
+                .collect(Collectors.toList());
+        document.append("bases", basesDocuments);
+
+        if (statusStage1 != null) {
+            document.append("statusStage1", statusStage1.toString());
+        }
+
+        if (statusStage2 != null) {
+            document.append("statusStage2", statusStage2.toString());
+        }
+
+        List<Document> answersDocuments = answers.stream()
+                .map(Answer::toJson)
+                .collect(Collectors.toList());
+        document.append("answers", answersDocuments);
+
+        return document;
+    }
+
+    public StudyReview(UUID id, String title, String resumo, String text, String authors, String keywords, List<Base> bases) {
+        this.id = id;
+        this.title = title;
+        this.resumo = resumo;
+        this.text = text;
+        this.authors = authors;
+        this.keywords = keywords;
+        this.bases = bases;
+    }
+    
     public UUID getId() {
         return id;
     }
