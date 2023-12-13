@@ -30,7 +30,5 @@ public class QuickStart {
 //                collection.updateOne(found, updateoperation);
 //                System.out.println("user updated");
 
-            }
-        }
     }
 }
