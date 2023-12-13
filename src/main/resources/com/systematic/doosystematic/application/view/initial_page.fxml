@@ -31,11 +31,10 @@
             <Font name="Leelawadee UI" size="14.0" />
          </font>
       </Label>
-      <Button fx:id="btnStart" contentDisplay="CENTER" layoutX="173.0" layoutY="228.0" mnemonicParsing="false" AnchorPane.leftAnchor="173.0" AnchorPane.topAnchor="228.0">
+      <Button fx:id="btnStart" onAction="#goToNewSystematicReview" contentDisplay="CENTER" layoutX="173.0" layoutY="228.0" mnemonicParsing="false" AnchorPane.leftAnchor="173.0" AnchorPane.topAnchor="228.0">
          <graphic>
             <ImageView fx:id="imgStart" fitHeight="48.0" fitWidth="42.0">
                <image>
-
                </image>
                <viewport>
                   <Rectangle2D />

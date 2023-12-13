@@ -1,9 +1,12 @@
 package com.systematic.doosystematic.application.controller;
 
+import com.systematic.doosystematic.application.view.WindowLoader;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+
+import java.io.IOException;
 
 public class InitialPageUIController {
     @FXML
@@ -24,11 +27,14 @@ public class InitialPageUIController {
     }
 
     private void setImages() {
-        Image image1 = new Image("file:src/main/resources/com/systematic/doosystematic/application/view/images/logo.png");
-        Image image2 = new Image("file:src/main/resources/com/systematic/doosystematic/application/view/images/play-button.png");
-        imgLogo.setImage(image1);
-        imgStart.setImage(image2);
+        Image imageLogo = new Image("file:src/main/resources/com/systematic/doosystematic/application/view/images/logo.png");
+        Image imagePlay = new Image("file:src/main/resources/com/systematic/doosystematic/application/view/images/play-button.png");
+        imgLogo.setImage(imageLogo);
+        imgStart.setImage(imagePlay);
     }
 
-
+    @FXML
+    private void goToNewSystematicReview() throws IOException {
+        WindowLoader.setRoot("newSystematicReview.fxml");
+    }
 }

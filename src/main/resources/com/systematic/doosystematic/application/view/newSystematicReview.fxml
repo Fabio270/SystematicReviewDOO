@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #EDEDED;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.systematic.doosystematic.NewSystematicReview">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #EDEDED;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.systematic.doosystematic.application.controller.NewSystematicReviewUIController">
    <children>
       <TextField fx:id="txtTitulo" layoutX="150.0" layoutY="66.0" prefHeight="26.0" prefWidth="377.0" />
       <Label layoutX="73.0" layoutY="66.0" text="Título:">
@@ -31,9 +31,8 @@
       </Label>
       <Button fx:id="btnUpload" layoutX="191.0" layoutY="235.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="75.0">
          <graphic>
-            <ImageView fitHeight="31.0" fitWidth="31.0" preserveRatio="true">
+            <ImageView fx:id="imgUpload" fitHeight="31.0" fitWidth="31.0" preserveRatio="true">
                <image>
-                  <Image url="@images/arrow.png" />
                </image>
             </ImageView>
          </graphic>
@@ -50,9 +49,8 @@
       </Label>
       <Button fx:id="btnNextProtocol" layoutX="477.0" layoutY="324.0" mnemonicParsing="false" prefWidth="46.0">
          <graphic>
-            <ImageView fitHeight="26.0" fitWidth="34.0">
+            <ImageView fx:id="imgNext" fitHeight="26.0" fitWidth="34.0">
                <image>
-                  <Image url="@images/arrow-next.png" />
                </image>
             </ImageView>
          </graphic>
