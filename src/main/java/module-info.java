@@ -10,12 +10,13 @@ module com.systematic.doosystematic {
     requires org.mongodb.bson;
     requires org.mongodb.driver.core;
     requires java.logging;
+    requires com.google.gson;
 
-    opens com.systematic.doosystematic;
-    exports com.systematic.doosystematic;
     exports com.systematic.doosystematic.application.view;
     exports com.systematic.doosystematic.application.controller to javafx.fxml;
     opens com.systematic.doosystematic.application.view.images;
     opens com.systematic.doosystematic.application.view;
     opens com.systematic.doosystematic.application.controller to javafx.fxml;
+    opens com.systematic.doosystematic.domain.entities to com.google.gson;
+
 }

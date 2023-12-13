@@ -70,10 +70,7 @@ public class MongoSystematicReviewDAO implements SystematicReviewDao {
 //                .collect(Collectors.toList());
 //        document.append("statistics", statisticsDocuments);
 
-        List<Document> basesDocuments = systematicReview.getBases().stream()
-                .map(Base::toJson)
-                .collect(Collectors.toList());
-        document.append("bases", basesDocuments);
+        document.append("bases", systematicReview.getBase());
         collection.insertOne(document);
 
         return systematicReview.getId();

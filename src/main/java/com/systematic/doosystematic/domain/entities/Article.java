@@ -1,8 +1,7 @@
 package com.systematic.doosystematic.domain.entities;
 
+import com.google.gson.annotations.Expose;
 import org.bson.Document;
-
-import java.util.UUID;
 
 public class Article {
 

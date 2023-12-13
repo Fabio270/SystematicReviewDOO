@@ -11,22 +11,22 @@ public class SystematicReview {
     private Protocol protocol;
     private List<StudyReview> studies;
     private List<Statistic> statistics;
-    private List<Base> bases;
+    private Base base;
 
-    public SystematicReview(UUID id, String name, String description, Protocol protocol, List<StudyReview> studies, List<Statistic> statistics, List<Base> bases) {
+    public SystematicReview(UUID id, String name, String description, Protocol protocol, List<StudyReview> studies, List<Statistic> statistics, Base base) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.protocol = protocol;
         this.studies = studies;
         this.statistics = statistics;
-        this.bases = bases;
+        this.base = base;
     }
 
-    public SystematicReview(UUID id, String name, String description) {
-        this.id = id;
+    public SystematicReview(String name, String description, Base base) {
         this.name = name;
         this.description = description;
+        this.base = base;
     }
 
     public UUID getId() {
@@ -53,8 +53,8 @@ public class SystematicReview {
         return statistics;
     }
 
-    public List<Base> getBases() {
-        return bases;
+    public Base getBase() {
+        return base;
     }
 
     public void setId(UUID id) {
@@ -81,8 +81,8 @@ public class SystematicReview {
         this.statistics = statistics;
     }
 
-    public void setBases(List<Base> bases) {
-        this.bases = bases;
+    public void setBase(Base base) {
+        this.base = base;
     }
 
     @Override
@@ -90,11 +90,11 @@ public class SystematicReview {
 
         if (this == o) return true;
         if (!(o instanceof SystematicReview that)) return false;
-        return Objects.equals(id, that.id) && Objects.equals(name, that.name) && Objects.equals(description, that.description) && Objects.equals(protocol, that.protocol) && Objects.equals(studies, that.studies) && Objects.equals(statistics, that.statistics) && Objects.equals(bases, that.bases);
+        return Objects.equals(id, that.id) && Objects.equals(name, that.name) && Objects.equals(description, that.description) && Objects.equals(protocol, that.protocol) && Objects.equals(studies, that.studies) && Objects.equals(statistics, that.statistics) && Objects.equals(base, that.base);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, description, protocol, studies, statistics, bases);
+        return Objects.hash(id, name, description, protocol, studies, statistics, base);
     }
 }

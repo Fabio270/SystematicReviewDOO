@@ -11,9 +11,8 @@ public class Base {
     private UUID systematicReviewId;
     private List<Article> articles;
 
-    public Base(String name, UUID systematicReviewId, List<Article> articles) {
+    public Base(String name, List<Article> articles) {
         this.name = name;
-        this.systematicReviewId=systematicReviewId;
         this.articles = articles;
     }
 
@@ -24,7 +23,7 @@ public class Base {
         List<Document> articleDocuments = articles.stream()
                 .map(Article::toJson)
                 .collect(Collectors.toList());
-        document.append("answers", articleDocuments);
+        document.append("articles", articleDocuments);
 
         return document;
     }
