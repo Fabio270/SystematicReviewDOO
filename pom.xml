@@ -97,10 +97,11 @@
             <artifactId>logback-classic</artifactId>
             <version>1.2.9</version> <!-- Use the latest version available -->
         </dependency>
-
-
-
-
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.9</version>
+        </dependency>
 
     </dependencies>
 
@@ -124,8 +125,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.systematic.doosystematic/com.systematic.doosystematic.HelloApplication
-                            </mainClass>
+                            <mainClass>com.systematic.doosystematic/com.systematic.doosystematic.application.view.WindowLoader</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>

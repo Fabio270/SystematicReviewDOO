@@ -13,12 +13,9 @@ public class StudyReviewValidator extends Validator<StudyReview> {
             notification.addError("studyReview is null.");
             return notification;
         }
-        if (nullOrEmpty(studyReview.getTitle())) notification.addError("Title is null or empty.");
-        if (nullOrEmpty(studyReview.getResumo())) notification.addError("Abstract is null or empty.");
-        if (nullOrEmpty(studyReview.getText())) notification.addError("Text is null or empty.");
-        if (nullOrEmpty(studyReview.getAuthors())) notification.addError("Authors is null or empty.");
-        if (nullOrEmpty(studyReview.getKeywords())) notification.addError("Keywords is null or empty.");
-        if (studyReview.getBases().isEmpty()) notification.addError("Bases are empty.");
+        if (studyReview.getArticle() == null) {
+            notification.addError("Article is null or empty.");
+        }
 
 
         return null;

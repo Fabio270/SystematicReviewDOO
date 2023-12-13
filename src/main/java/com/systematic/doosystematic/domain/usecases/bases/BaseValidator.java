@@ -15,7 +15,7 @@ public class BaseValidator extends Validator<Base> {
         }
 
         if (nullOrEmpty(base.getName())) notification.addError("Name is null or empty.");
-        if (nullOrEmpty(base.getLink())) notification.addError("Link is null or empty.");
+        if (nullOrEmpty(base.getArticles())) notification.addError("Articles is null or empty.");
 
         return notification;
     }
