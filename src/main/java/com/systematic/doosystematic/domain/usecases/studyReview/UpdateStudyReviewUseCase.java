@@ -31,7 +31,7 @@ public class UpdateStudyReviewUseCase {
 
         systematicReview.setStudies(studies);
 
-        return dao.addStudyReview(studyReview);
+        return dao.addStudyReview(systematicReview);
     }
 }
 
