@@ -8,11 +8,16 @@ public class Criteria {
     private UUID id;
     private UUID systematicReviewId;
     private String description;
-    private boolean type;
+    private CriteriaType type;
 
-    public Criteria(UUID id, UUID systematicReviewId, String description, boolean type) {
+    public Criteria(UUID id, UUID systematicReviewId, String description, CriteriaType type) {
         this.id = id;
         this.systematicReviewId = systematicReviewId;
+        this.description = description;
+        this.type = type;
+    }
+
+    public Criteria(String description, CriteriaType type) {
         this.description = description;
         this.type = type;
     }
@@ -33,7 +38,7 @@ public class Criteria {
         return description;
     }
 
-    public boolean getType() {
+    public CriteriaType getType() {
         return type;
     }
 
