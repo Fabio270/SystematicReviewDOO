@@ -1,5 +1,7 @@
 package com.systematic.doosystematic.domain.entities;
 
+import org.bson.Document;
+
 import java.util.UUID;
 
 public class Base {
@@ -22,6 +24,15 @@ public class Base {
         this.systematicReviewId=systematicReviewId;
         this.link = link;
     }
+
+    public Document toJson() {
+        Document document = new Document("name", name)
+                .append("systematicReviewId", systematicReviewId.toString())
+                .append("link", link);
+
+        return document;
+    }
+
     public String getName() {
         return name;
     }
