@@ -8,11 +8,14 @@ import java.util.UUID;
 
 public interface SystematicReviewDao extends DAO<SystematicReview, UUID>{
     boolean assingProtocol(SystematicReview systematicReview);
-    boolean addStudyReview(StudyReview studyReview);
-    boolean addBase(Base base);
-    boolean deleteStudyReview(StudyReview studyReview);
+
+    boolean addStudyReview(SystematicReview systematicReview);
+
+    boolean addBase(SystematicReview systematicReview);
+    boolean deleteStudyReview(SystematicReview systematicReview);
+
     Optional<StudyReview> findOneStudyReview(UUID studyReviewId);
 
-    boolean deleteBase(Base base);
+    boolean deleteBase(SystematicReview systematicReview);
     Optional<Base> findOneBase(String baseName);
 }
