@@ -22,6 +22,12 @@ public class Criteria {
         this.type = type;
     }
 
+    public Criteria(UUID id, String description, CriteriaType type) {
+        this.id = id;
+        this.description = description;
+        this.type = type;
+    }
+
     public Document toJson() {
         Document document = new Document("id", id.toString());
         document.append("description", description);

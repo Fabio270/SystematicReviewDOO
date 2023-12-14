@@ -18,9 +18,7 @@ public class CreateProtocolUseCase {
         Notification notification = validator.validate(protocol);
 
         if (notification.hasErrors()) throw new IllegalArgumentException(notification.errorMessage());
-
         systematicReview.setProtocol(protocol);
-
         dao.assingProtocol(systematicReview);
     }
 }

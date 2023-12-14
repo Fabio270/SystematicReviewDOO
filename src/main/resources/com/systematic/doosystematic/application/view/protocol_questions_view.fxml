@@ -52,17 +52,13 @@
       <Button fx:id="btnNextQuestions" layoutX="497.0" layoutY="344.0" mnemonicParsing="false" prefWidth="46.0">
          <graphic>
             <ImageView fx:id="imgArrowNext" fitHeight="26.0" fitWidth="34.0">
-               <image>
-                  <Image url="@images/arrow-next.png" />
-               </image></ImageView>
+            </ImageView>
          </graphic>
       </Button>
       <Button fx:id="btnInclusao" layoutX="273.0" layoutY="277.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0">
          <graphic>
             <ImageView fx:id="imgPlus" fitHeight="37.0" fitWidth="37.0">
-               <image>
-                  <Image url="@images/plus.png" />
-               </image></ImageView>
+            </ImageView>
          </graphic>
       </Button>
    </children>

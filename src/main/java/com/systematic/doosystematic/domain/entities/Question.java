@@ -15,6 +15,11 @@ public abstract class Question {
         this.description = description;
     }
 
+    public Question(UUID id, String description) {
+        this.id = id;
+        this.description = description;
+    }
+
     public Document toJson() {
         Document document = new Document("id", id.toString());
         document.append("description", description);

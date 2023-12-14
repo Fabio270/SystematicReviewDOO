@@ -16,6 +16,12 @@ public class Base {
         this.articles = articles;
     }
 
+    public Base(String name, UUID systematicReviewId, List<Article> articles) {
+        this.name = name;
+        this.systematicReviewId = systematicReviewId;
+        this.articles = articles;
+    }
+
     public Document toJson() {
         Document document = new Document("name", name)
                 .append("systematicReviewId", systematicReviewId.toString());

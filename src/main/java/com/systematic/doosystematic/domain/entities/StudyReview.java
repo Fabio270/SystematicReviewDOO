@@ -22,6 +22,11 @@ public class StudyReview {
         this.answers = answers;
     }
 
+    public StudyReview(UUID id, Article article) {
+        this.id = id;
+        this.article = article;
+    }
+
     public Document toJson() {
         Document document = new Document("id", id.toString())
                 .append("article", article.toJson());

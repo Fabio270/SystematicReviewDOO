@@ -11,6 +11,11 @@ public class QuestionPickList extends Question{
         this.options = options;
     }
 
+    public QuestionPickList(UUID id, String description, List<String> options) {
+        super(id, description);
+        this.options = options;
+    }
+
     public List<String> getOptions() {
         return options;
     }
