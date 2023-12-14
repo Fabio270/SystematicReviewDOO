@@ -2,6 +2,7 @@ package com.systematic.doosystematic.domain.usecases.studyReview;
 
 import com.systematic.doosystematic.domain.entities.Criteria;
 import com.systematic.doosystematic.domain.entities.StudyReview;
+import com.systematic.doosystematic.domain.entities.SystematicReview;
 import com.systematic.doosystematic.domain.usecases.systematicReview.SystematicReviewDao;
 import com.systematic.doosystematic.utils.EntityNotFoundException;
 
@@ -16,10 +17,11 @@ public class DeleteStudyReviewUseCase {
         this.dao = dao;
     }
 
-    public boolean delete(UUID studyReviewId) {
+    public boolean delete(UUID studyReviewId, SystematicReview systematicReview) {
         Optional<StudyReview> optStudyReview = dao.findOneStudyReview(studyReviewId);
         if (optStudyReview.isEmpty())
             throw new EntityNotFoundException("Study Review not found");
-        return dao.deleteStudyReview(optStudyReview.get());
+        systematicReview.getStudies().remove(optStudyReview);
+        return dao.deleteStudyReview(systematicReview);
     }
 }

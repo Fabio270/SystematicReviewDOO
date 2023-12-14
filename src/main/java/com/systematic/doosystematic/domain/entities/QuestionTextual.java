@@ -7,4 +7,10 @@ public class QuestionTextual extends Question{
         super(id, systematicReviewId, description);
     }
 
+    public QuestionTextual(UUID id, String description) {
+        super(id, description);
+    }
+
+
+
 }
