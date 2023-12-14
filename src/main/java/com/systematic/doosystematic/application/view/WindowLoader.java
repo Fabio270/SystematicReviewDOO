@@ -11,9 +11,12 @@ import java.io.IOException;
 public class WindowLoader extends Application {
     private static Scene scene;
     private static Object controller;
+
+    private  static Stage primaryStage;
     @Override
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFxml("initial_page.fxml"));
+        primaryStage = stage;
         stage.setMinWidth(600);
         stage.setMinHeight(400.0);
         stage.setTitle("Systematic Review");
@@ -31,6 +34,10 @@ public class WindowLoader extends Application {
     }
     public static Object getController() {
         return controller;
+    }
+
+    public static Stage getPrimaryStage() {
+        return primaryStage;
     }
     public static void main(String[] args) {
         launch();

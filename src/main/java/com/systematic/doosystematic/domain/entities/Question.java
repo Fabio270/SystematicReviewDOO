@@ -16,7 +16,10 @@ public abstract class Question {
     }
 
     public Question(UUID id, String description) {
-        this.id = id;
+        this.description = description;
+    }
+
+    public Question(String description) {
         this.description = description;
     }
 

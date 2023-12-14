@@ -10,19 +10,16 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.systematic.doosystematic.application.view.MultiChoicesQuestion">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.systematic.doosystematic.application.controller.MultiChoicesQuestionUIController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#94949440" height="286.0" layoutX="47.0" layoutY="50.0" stroke="BLACK" strokeType="INSIDE" width="478.0" />
-      <TextField fx:id="txtDescResposta1" layoutX="139.0" layoutY="83.0" prefHeight="26.0" prefWidth="364.0" />
-      <TextField fx:id="txtDescResposta2" layoutX="139.0" layoutY="147.0" prefHeight="26.0" prefWidth="364.0" />
-      <TextField fx:id="txtDescResposta3" layoutX="139.0" layoutY="211.0" prefHeight="26.0" prefWidth="364.0" />
-      <TextField fx:id="txtDescResposta4" layoutX="139.0" layoutY="278.0" prefHeight="26.0" prefWidth="364.0" />
-      <Button fx:id="btnCloseAnswerList" layoutX="532.0" layoutY="14.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0">
+      <TextField fx:id="txtAnswer1" layoutX="139.0" layoutY="83.0" prefHeight="26.0" prefWidth="364.0" />
+      <TextField fx:id="txtAnswer2" layoutX="139.0" layoutY="147.0" prefHeight="26.0" prefWidth="364.0" />
+      <TextField fx:id="txtAnswer3" layoutX="139.0" layoutY="211.0" prefHeight="26.0" prefWidth="364.0" />
+      <TextField fx:id="txtAnswer4" layoutX="139.0" layoutY="278.0" prefHeight="26.0" prefWidth="364.0" />
+      <Button fx:id="btnCloseAnswerList" onAction="#backToProtocolQuestionsView" layoutX="532.0" layoutY="14.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0">
          <graphic>
-            <ImageView fx:id="imgPlus" fitHeight="37.0" fitWidth="37.0">
-               <image>
-                  <Image url="@images/check.png" />
-               </image>
+            <ImageView fx:id="imgCheck" fitHeight="37.0" fitWidth="37.0">
             </ImageView>
          </graphic>
       </Button>
