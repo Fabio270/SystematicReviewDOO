@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.systematic.doosystematic.application.view.MultiChoicesQuestion">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#94949440" height="286.0" layoutX="47.0" layoutY="50.0" stroke="BLACK" strokeType="INSIDE" width="478.0" />
+      <TextField fx:id="txtDescResposta1" layoutX="139.0" layoutY="83.0" prefHeight="26.0" prefWidth="364.0" />
+      <TextField fx:id="txtDescResposta2" layoutX="139.0" layoutY="147.0" prefHeight="26.0" prefWidth="364.0" />
+      <TextField fx:id="txtDescResposta3" layoutX="139.0" layoutY="211.0" prefHeight="26.0" prefWidth="364.0" />
+      <TextField fx:id="txtDescResposta4" layoutX="139.0" layoutY="278.0" prefHeight="26.0" prefWidth="364.0" />
+      <Button fx:id="btnCloseAnswerList" layoutX="532.0" layoutY="14.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0">
+         <graphic>
+            <ImageView fx:id="imgPlus" fitHeight="37.0" fitWidth="37.0">
+               <image>
+                  <Image url="@images/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="78.0" layoutY="83.0" text="a)">
+         <font>
+            <Font name="Book Antiqua" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="78.0" layoutY="147.0" text="b)">
+         <font>
+            <Font name="Book Antiqua" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="78.0" layoutY="211.0" text="c)">
+         <font>
+            <Font name="Book Antiqua" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="78.0" layoutY="278.0" text="d)">
+         <font>
+            <Font name="Book Antiqua" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="47.0" layoutY="23.0" text="Lista de opções">
+         <font>
+            <Font name="Book Antiqua" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

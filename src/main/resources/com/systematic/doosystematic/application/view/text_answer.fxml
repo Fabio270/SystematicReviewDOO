@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.systematic.doosystematic.application.view.TextQuestion">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#94949440" height="260.0" layoutX="70.0" layoutY="70.0" stroke="BLACK" strokeType="INSIDE" width="435.0" />
+      <Label layoutX="57.0" layoutY="33.0" text="Resposta">
+         <font>
+            <Font name="Book Antiqua" size="20.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtRespostaCorreta" layoutX="99.0" layoutY="97.0" prefHeight="200.0" prefWidth="372.0" />
+      <Button fx:id="btnCloseAnswer" layoutX="514.0" layoutY="330.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0">
+         <graphic>
+            <ImageView fx:id="imgPlus" fitHeight="37.0" fitWidth="37.0">
+               <image>
+                  <Image url="@images/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
