@@ -23,7 +23,7 @@
             <Font name="Book Antiqua" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="75.0" layoutY="104.0" text="Pergunta">
+      <Label fx:id="lblNumberQuestion" layoutX="75.0" layoutY="104.0" text="Pergunta">
          <font>
             <Font name="Book Antiqua" size="20.0" />
          </font>
@@ -50,13 +50,13 @@
             <Font name="Book Antiqua" size="20.0" />
          </font>
       </RadioButton>
-      <Button fx:id="btnNextQuestions" layoutX="497.0" layoutY="344.0" mnemonicParsing="false" prefWidth="46.0">
+      <Button onAction="#goToFiltragem1" layoutX="497.0" layoutY="344.0" mnemonicParsing="false" prefWidth="46.0">
          <graphic>
             <ImageView fx:id="imgArrowNext" fitHeight="26.0" fitWidth="34.0">
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="btnInclusao" onAction="#addQuestion" layoutX="273.0" layoutY="277.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0">
+      <Button onAction="#addQuestion" layoutX="273.0" layoutY="277.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0">
          <graphic>
             <ImageView fx:id="imgPlus" fitHeight="37.0" fitWidth="37.0">
             </ImageView>

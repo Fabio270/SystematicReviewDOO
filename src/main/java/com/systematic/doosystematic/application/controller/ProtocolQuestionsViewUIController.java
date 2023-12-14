@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
@@ -36,6 +37,9 @@ public class ProtocolQuestionsViewUIController {
     @FXML
     private RadioButton rdBtnBoxList;
 
+    @FXML
+    private Label lblNumberQuestion;
+
     private ToggleGroup toggleGroup;
 
     private SystematicReview systematicReview;
@@ -47,13 +51,21 @@ public class ProtocolQuestionsViewUIController {
 
     private final SystematicReviewAlerts alerts = new SystematicReviewAlerts();
 
+    int counter;
+
     @FXML
     public void initialize() {
         setImages();
         setToggleGroup();
         questions = new ArrayList<>();
         multiChoiceOptions = new ArrayList<>();
-        alerts.showSuccessAlert("chamou esta porra!");
+        counter = 0;
+        updateQuestionCounter();
+    }
+
+    private void updateQuestionCounter() {
+        counter += 1;
+        lblNumberQuestion.setText("Pergunta " + String.valueOf(counter));
     }
 
     private void setImages() {
@@ -136,8 +148,20 @@ public class ProtocolQuestionsViewUIController {
     private void questionAddedWithSuccess() {
         txtDescription.clear();
         toggleGroup.selectToggle(null);
+        updateQuestionCounter();
         alerts.showSuccessAlert("Questão adicionada com sucesso. \n Número de questões adicionadas até o momento: " +
                 String.valueOf(questions.size()));
+    }
+
+    @FXML
+    private void goToFiltragem1() {
+        if (questions.isEmpty()) {
+            alerts.showInsuficientDataAlert();
+        } else {
+//            protocol.setForm(questions);
+//            systematicReview.setProtocol(protocol);
+
+        }
     }
 
     public ProtocolQuestionsViewUIController getController() {

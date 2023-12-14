@@ -1,10 +1,7 @@
 package com.systematic.doosystematic.application.controller;
 
-import com.systematic.doosystematic.application.view.WindowLoader;
 import com.systematic.doosystematic.utils.SystematicReviewAlerts;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -72,7 +69,7 @@ public class MultiChoicesQuestionUIController {
         }
     }
 
-    private void presentOptionsToProtocolQuestionsView(List<String> options) throws IOException {
+    private void presentOptionsToProtocolQuestionsView(List<String> options) {
         protocolQuestionsViewUIController.setOptions(options);
     }
 }

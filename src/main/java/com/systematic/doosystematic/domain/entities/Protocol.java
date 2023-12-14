@@ -98,4 +98,8 @@ public class Protocol {
     public void setTitle(String title) {
         this.title = title;
     }
+
+    public void setForm(List<Question> form) {
+        this.form = form;
+    }
 }

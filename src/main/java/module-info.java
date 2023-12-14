@@ -12,6 +12,7 @@ module com.systematic.doosystematic {
     requires java.logging;
     requires com.google.gson;
 
+    exports com.systematic.doosystematic.domain.entities;
     exports com.systematic.doosystematic.application.view;
     exports com.systematic.doosystematic.application.controller to javafx.fxml;
     opens com.systematic.doosystematic.application.view.images;

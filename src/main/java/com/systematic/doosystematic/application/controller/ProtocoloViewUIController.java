@@ -9,7 +9,6 @@ import com.systematic.doosystematic.utils.SystematicReviewAlerts;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -34,15 +33,6 @@ public class ProtocoloViewUIController {
 
     @FXML
     private TextField txtExclusionCriteria;
-
-    @FXML
-    private Button btnInclusion;
-
-    @FXML
-    private Button btnExclusion;
-
-    @FXML
-    private Button btnNextQuestions;
 
     @FXML
     private ImageView imgPlus1;
@@ -120,7 +110,12 @@ public class ProtocoloViewUIController {
     }
 
     private void presentDataToProtocolQuestionsView(Protocol protocol) throws IOException {
-        ProtocolQuestionsViewUIController protocolQuestionsViewUIController = new ProtocolQuestionsViewUIController().getController();
+//        ProtocolQuestionsViewUIController protocolQuestionsViewUIController = new ProtocolQuestionsViewUIController().getController();
+//        protocolQuestionsViewUIController.setCurrentData(systematicReview, protocol);
+//        WindowLoader.setRoot("protocol_questions_view.fxml");
+        FXMLLoader loader = new FXMLLoader();
+        Parent parent = loader.load(WindowLoader.class.getResource("protocol_questions_view.fxml").openStream());
+        ProtocolQuestionsViewUIController protocolQuestionsViewUIController = loader.getController();
         protocolQuestionsViewUIController.setCurrentData(systematicReview, protocol);
         WindowLoader.setRoot("protocol_questions_view.fxml");
     }
