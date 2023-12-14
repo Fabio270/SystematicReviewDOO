@@ -16,9 +16,8 @@ public class Protocol {
     private List<Criteria> inclusionCriteria;
     private List<Criteria> exclusionCriteria;
 
-    public Protocol(UUID uuid, UUID systematicReviewId, String title, String description, String searchString, List<Question> form, List<Criteria> inclusionCriteria, List<Criteria> exclusionCriteria) {
+    public Protocol(UUID uuid, String title, String description, String searchString, List<Question> form, List<Criteria> inclusionCriteria, List<Criteria> exclusionCriteria) {
         this.uuid = uuid;
-        this.systematicReviewId = systematicReviewId;
         this.title = title;
         this.description = description;
         this.searchString = searchString;

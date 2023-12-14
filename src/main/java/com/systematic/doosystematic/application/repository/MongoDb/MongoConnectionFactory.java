@@ -16,7 +16,7 @@ public class MongoConnectionFactory {
 
     public static synchronized MongoClient getMongoClient(){
         if (mongoClient == null){
-            String uri = "mongodb+srv://aguiar:doo123>@clustervitor.wr2o7ko.mongodb.net/?retryWrites=true&w=majority";
+            String uri = "mongodb+srv://fabioseyiji:EkKdOznQFT7r51u1@cluster0.lvyory5.mongodb.net/?retryWrites=true&w=majority";
             try {
                 mongoClient = MongoClients.create(uri);
             } catch (MongoException e) {

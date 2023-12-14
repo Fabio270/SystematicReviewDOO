@@ -25,14 +25,16 @@ class CreateSystematicReviewUseCaseTest {
         Criteria criteria2 = new Criteria(UUID.randomUUID(), "blabla", CriteriaType.INCLUSION);
         List<Criteria> listCriteria2 = List.of(criteria2);
 
-        Base base1 = new Base("NAMEBASE", UUID.randomUUID(), null);
+        Article article = new Article(1, "oooo", "oooooooo", "aaaaa", "aaaaa", "aaaaaaaaaaaa");
+        List<Article> articleList = List.of(article);
+        Base base1 = new Base("NAMEBASE", UUID.randomUUID(), articleList);
 
-        StudyReview studyReview = new StudyReview(UUID.randomUUID(), null);
+        StudyReview studyReview = new StudyReview(UUID.randomUUID(), article);
         studyReview.setAnswers(List.of(new Answer(question2, "aaaaaaa ")));
         List<StudyReview> studyReviewList = List.of(studyReview);
 
         List<Statistic> statisticList = List.of(new Statistic());
-        Protocol protocol = new Protocol("testing protocol", "testing description", "testing searchString", listCriteria2, listCriteria1);
+        Protocol protocol = new Protocol(UUID.randomUUID(), "testing protocol", "testing description", "testing searchString", list, listCriteria2, listCriteria1);
         SystematicReview systematicReview = new SystematicReview(UUID.randomUUID(), "test", "testing", protocol, studyReviewList, statisticList, base1);
 
         MongoSystematicReviewDAO mongoDAO = new MongoSystematicReviewDAO();
