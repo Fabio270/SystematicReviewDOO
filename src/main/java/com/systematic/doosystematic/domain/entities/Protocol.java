@@ -36,6 +36,7 @@ public class Protocol {
 
     public Document toJson(){
         Document document = new Document("uuid", uuid.toString());
+        document.append("systematicId", systematicReviewId.toString());
         document.append("title", title);
         document.append("description", description);
         document.append("searchString", searchString);

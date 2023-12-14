@@ -25,6 +25,7 @@ public abstract class Question {
 
     public Document toJson() {
         Document document = new Document("id", id.toString());
+        document.append("systematicId", systematicReviewId.toString());
         document.append("description", description);
         return document;
     }
