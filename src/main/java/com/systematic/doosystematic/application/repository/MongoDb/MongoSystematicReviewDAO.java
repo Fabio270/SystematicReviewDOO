@@ -5,8 +5,10 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.result.DeleteResult;
 import com.mongodb.client.result.UpdateResult;
+import com.systematic.doosystematic.application.repository.MongoDb.MongoConnectionFactory;
 import com.systematic.doosystematic.domain.entities.*;
 import com.systematic.doosystematic.domain.usecases.systematicReview.SystematicReviewDao;
+import com.systematic.doosystematic.utils.DAO;
 import org.bson.Document;
 
 import java.util.List;

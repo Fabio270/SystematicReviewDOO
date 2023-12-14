@@ -8,7 +8,6 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.systematic.doosystematic.Filtragem2ArtigoIndividual">
    <children>
       <Label layoutX="61.0" layoutY="14.0" text="Filtragem 2">
@@ -27,11 +26,11 @@
             <Font name="Book Antiqua" size="12.0" />
          </font>
       </Label>
-      <Button fx:id="btnNextFiltragem2" layoutX="500.0" layoutY="345.0" mnemonicParsing="false" prefWidth="46.0">
+      <Button fx:id="btnBackToList" layoutX="42.0" layoutY="344.0" mnemonicParsing="false" prefWidth="46.0">
          <graphic>
             <ImageView fitHeight="26.0" fitWidth="34.0">
                <image>
-                  <Image url="@images/arrow-next.png" />
+                  <Image url="@images/goBack.png" />
                </image>
             </ImageView>
          </graphic>
