@@ -28,7 +28,7 @@
             <Font name="Book Antiqua" size="20.0" />
          </font>
       </Label>
-      <Button fx:id="btnInclusion" onAction="#addInclusionCriteria" layoutX="119.0" layoutY="305.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0">
+      <Button onAction="#addInclusionCriteria" layoutX="119.0" layoutY="305.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0">
          <graphic>
             <ImageView fx:id="imgPlus1" fitHeight="37.0" fitWidth="37.0">
             </ImageView>
@@ -39,7 +39,7 @@
             <Font name="Book Antiqua" size="20.0" />
          </font>
       </Label>
-      <Button fx:id="btnNextQuestions" onAction="#goToProtocolQuestionsView" layoutX="487.0" layoutY="334.0" mnemonicParsing="false" prefWidth="46.0">
+      <Button onAction="#goToProtocolQuestionsView" layoutX="487.0" layoutY="334.0" mnemonicParsing="false" prefWidth="46.0">
          <graphic>
             <ImageView fx:id="imgArrowNext" fitHeight="26.0" fitWidth="34.0">
             </ImageView>
@@ -62,7 +62,7 @@
       </Label>
       <TextField fx:id="txtInclusionCriteria" layoutX="65.0" layoutY="271.0" prefHeight="26.0" prefWidth="174.0" />
       <TextField fx:id="txtExclusionCriteria" layoutX="333.0" layoutY="271.0" prefHeight="26.0" prefWidth="174.0" />
-      <Button fx:id="btnExclusion" onAction="#addExclusionCriteria" layoutX="394.0" layoutY="305.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0">
+      <Button onAction="#addExclusionCriteria" layoutX="394.0" layoutY="305.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0">
          <graphic>
             <ImageView fx:id="imgPlus2" fitHeight="37.0" fitWidth="37.0">
             </ImageView>

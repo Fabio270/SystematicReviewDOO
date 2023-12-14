@@ -2,7 +2,6 @@ package com.systematic.doosystematic.application.controller;
 
 import com.systematic.doosystematic.application.view.WindowLoader;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -13,13 +12,7 @@ public class InitialPageUIController {
     private ImageView imgLogo;
 
     @FXML
-    private Button btnStart;
-
-    @FXML
     private ImageView imgStart;
-
-    @FXML
-    private Button btnSaved1;
 
     @FXML
     public void initialize() {

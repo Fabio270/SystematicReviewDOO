@@ -11,6 +11,9 @@ public class QuestionTextual extends Question{
         super(id, description);
     }
 
+    public QuestionTextual(String description) {
+        super(description);
+    }
 
 
 }

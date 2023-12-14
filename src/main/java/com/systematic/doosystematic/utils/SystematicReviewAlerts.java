@@ -4,7 +4,7 @@ import javafx.scene.control.Alert;
 
 public class SystematicReviewAlerts {
 
-    private String systematicReview = "Systematic Review";
+    private String systematicReview = "Systematic Review informa";
     public void showErrorAlert(Exception e) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setHeaderText(systematicReview);
