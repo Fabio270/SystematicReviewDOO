@@ -26,7 +26,7 @@ public class JSONParser {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (JsonSyntaxException e) {
-            System.out.println("O arquivo selecionado não é um JSON válido.");
+            System.out.println("O arquivo selecionado não é um JSON válido");
         } catch (IOException e) {
             e.printStackTrace();
         }
