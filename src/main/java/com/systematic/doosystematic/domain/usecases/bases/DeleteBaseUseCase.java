@@ -18,7 +18,7 @@ public class DeleteBaseUseCase {
         Optional<Base> optBase = dao.findOneBase(baseName);
         if (optBase.isEmpty())
             throw new EntityNotFoundException("Criteria not found");
-        systematicReview.getBases().remove(optBase);
+        systematicReview.setBase(null);
         return dao.deleteBase(systematicReview);
     }
 }

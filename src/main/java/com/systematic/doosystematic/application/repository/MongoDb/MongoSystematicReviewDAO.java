@@ -1,4 +1,4 @@
-package com.systematic.doosystematic.repository.MongoDb;
+package com.systematic.doosystematic.application.repository.MongoDb;
 
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoCollection;
@@ -58,14 +58,12 @@ public class MongoSystematicReviewDAO implements SystematicReviewDao {
         MongoDatabase database = mongoClient.getDatabase("systematic");
         MongoCollection<Document> collection = database.getCollection("systematicreview");
 
-        List<Document> basesDocuments = systematicReview.getBases().stream()
-                .map(Base::toJson)
-                .collect(Collectors.toList());
+        Document base = systematicReview.getBase().toJson();
 
         Document filter = new Document("id", systematicReview.getId().toString());
 
         Document update = new Document("$set", new Document()
-                .append("bases", basesDocuments)
+                .append("base", base)
         );
 
         UpdateResult updateResult = collection.updateOne(filter, update);
@@ -103,14 +101,12 @@ public class MongoSystematicReviewDAO implements SystematicReviewDao {
         MongoDatabase database = mongoClient.getDatabase("systematic");
         MongoCollection<Document> collection = database.getCollection("systematicreview");
 
-        List<Document> basesDocuments = systematicReview.getBases().stream()
-                .map(Base::toJson)
-                .collect(Collectors.toList());
+        Document base = systematicReview.getBase().toJson();
 
         Document filter = new Document("id", systematicReview.getId().toString());
 
         Document update = new Document("$set", new Document()
-                .append("bases", basesDocuments)
+                .append("base", base)
         );
 
         UpdateResult updateResult = collection.updateOne(filter, update);
@@ -143,11 +139,7 @@ public class MongoSystematicReviewDAO implements SystematicReviewDao {
 //                .collect(Collectors.toList());
 //        document.append("statistics", statisticsDocuments);
 
-        List<Document> basesDocuments = systematicReview.getBases().stream()
-                .map(Base::toJson)
-                .collect(Collectors.toList());
-        document.append("bases", basesDocuments);
-
+        document.append("bases", systematicReview.getBase());
         collection.insertOne(document);
 
         return systematicReview.getId();
@@ -193,9 +185,7 @@ public class MongoSystematicReviewDAO implements SystematicReviewDao {
 //                .collect(Collectors.toList());
 //        document.append("statistics", statisticsDocuments);
 
-        List<Document> basesDocuments = systematicReview.getBases().stream()
-                .map(Base::toJson)
-                .collect(Collectors.toList());
+        Document base = systematicReview.getBase().toJson();
 
         Document filter = new Document("id", systematicReview.getId().toString());
 
@@ -204,7 +194,7 @@ public class MongoSystematicReviewDAO implements SystematicReviewDao {
                 .append("description", systematicReview.getDescription())
                 .append("protocol", systematicReview.getProtocol().toJson())
                 .append("studies", studiesDocuments)
-                .append("bases", basesDocuments)
+                .append("base", base)
         );
 
         UpdateResult updateResult = collection.updateOne(filter, update);

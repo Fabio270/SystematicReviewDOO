@@ -8,40 +8,28 @@ import java.util.stream.Collectors;
 
 public class StudyReview {
     private UUID id;
-    private String title;
-    private String resumo;
-    private String text;
-    private String authors;
-    private String keywords;
-    private List<Base> bases;
+    private UUID systematicReviewId;
+    private Article article;
     private Enum<Stage1> statusStage1;
     private Enum<Stage2> statusStage2;
     private List<Answer> answers;
 
-    public StudyReview(UUID id, String title, String resumo, String text, String authors, String keywords, List<Base> bases, Enum<Stage1> statusStage1, List<Answer> answers) {
+    public StudyReview(UUID id, UUID systematicReviewId, Article article, Enum<Stage1> statusStage1, List<Answer> answers) {
         this.id = id;
-        this.title = title;
-        this.resumo = resumo;
-        this.text = text;
-        this.authors = authors;
-        this.keywords = keywords;
-        this.bases = bases;
+        this.systematicReviewId = systematicReviewId;
+        this.article = article;
         this.statusStage1 = statusStage1;
         this.answers = answers;
     }
 
+    public StudyReview(UUID id, Article article) {
+        this.id = id;
+        this.article = article;
+    }
+
     public Document toJson() {
         Document document = new Document("id", id.toString())
-                .append("title", title)
-                .append("resumo", resumo)
-                .append("text", text)
-                .append("authors", authors)
-                .append("keywords", keywords);
-
-        List<Document> basesDocuments = bases.stream()
-                .map(Base::toJson)
-                .collect(Collectors.toList());
-        document.append("bases", basesDocuments);
+                .append("article", article.toJson());
 
         if (statusStage1 != null) {
             document.append("statusStage1", statusStage1.toString());
@@ -59,42 +47,16 @@ public class StudyReview {
         return document;
     }
 
-    public StudyReview(UUID id, String title, String resumo, String text, String authors, String keywords, List<Base> bases) {
-        this.id = id;
-        this.title = title;
-        this.resumo = resumo;
-        this.text = text;
-        this.authors = authors;
-        this.keywords = keywords;
-        this.bases = bases;
+    public Article getArticle() {
+        return article;
+    }
+
+    public void setArticle(Article article) {
+        this.article = article;
     }
 
     public UUID getId() {
         return id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public String getResumo() {
-        return resumo;
-    }
-
-    public String getText() {
-        return text;
-    }
-
-    public String getAuthors() {
-        return authors;
-    }
-
-    public String getKeywords() {
-        return keywords;
-    }
-
-    public List<Base> getBases() {
-        return bases;
     }
 
     public Enum<Stage1> getStatusStage1() {
@@ -109,10 +71,6 @@ public class StudyReview {
         return answers;
     }
 
-    public void setBases(List<Base> bases) {
-        this.bases = bases;
-    }
-
     public void setStatusStage1(Enum<Stage1> statusStage1) {
         this.statusStage1 = statusStage1;
     }
@@ -123,5 +81,13 @@ public class StudyReview {
 
     public void setAnswers(List<Answer> answers) {
         this.answers = answers;
+    }
+
+    public UUID getSystematicReviewId() {
+        return systematicReviewId;
+    }
+
+    public void setSystematicReviewId(UUID systematicReviewId) {
+        this.systematicReviewId = systematicReviewId;
     }
 }

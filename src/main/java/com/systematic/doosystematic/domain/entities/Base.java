@@ -2,11 +2,45 @@ package com.systematic.doosystematic.domain.entities;
 
 import org.bson.Document;
 
+import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 public class Base {
     private String name;
     private UUID systematicReviewId;
+    private List<Article> articles;
+
+    public Base(String name, List<Article> articles) {
+        this.name = name;
+        this.articles = articles;
+    }
+
+    public Base(String name, UUID systematicReviewId, List<Article> articles) {
+        this.name = name;
+        this.systematicReviewId = systematicReviewId;
+        this.articles = articles;
+    }
+
+    public Document toJson() {
+        Document document = new Document("name", name)
+                .append("systematicReviewId", systematicReviewId.toString());
+
+        List<Document> articleDocuments = articles.stream()
+                .map(Article::toJson)
+                .collect(Collectors.toList());
+        document.append("articles", articleDocuments);
+
+        return document;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public UUID getSystematicReviewId() {
         return systematicReviewId;
@@ -16,37 +50,11 @@ public class Base {
         this.systematicReviewId = systematicReviewId;
     }
 
-    private String link;
-
-
-    public Base(String name, UUID systematicReviewId,String link) {
-        this.name = name;
-        this.systematicReviewId=systematicReviewId;
-        this.link = link;
+    public List<Article> getArticles() {
+        return articles;
     }
 
-    public Document toJson() {
-        Document document = new Document("name", name)
-                .append("systematicReviewId", systematicReviewId.toString())
-                .append("link", link);
-
-        return document;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getLink() {
-        return link;
-    }
-
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setLink(String link) {
-        this.link = link;
+    public void setArticles(List<Article> articles) {
+        this.articles = articles;
     }
 }

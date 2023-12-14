@@ -8,14 +8,18 @@ import java.util.stream.Collectors;
 
 public class Protocol {
     private UUID uuid;
+    private UUID systematicReviewId;
+    private String title;
     private String description;
     private String searchString;
     private List<Question> form;
     private List<Criteria> inclusionCriteria;
     private List<Criteria> exclusionCriteria;
 
-    public Protocol(UUID uuid, String description, String searchString, List<Question> form, List<Criteria> inclusionCriteria, List<Criteria> exclusionCriteria) {
+    public Protocol(UUID uuid, UUID systematicReviewId, String title, String description, String searchString, List<Question> form, List<Criteria> inclusionCriteria, List<Criteria> exclusionCriteria) {
         this.uuid = uuid;
+        this.systematicReviewId = systematicReviewId;
+        this.title = title;
         this.description = description;
         this.searchString = searchString;
         this.form = form;
@@ -23,8 +27,17 @@ public class Protocol {
         this.exclusionCriteria = exclusionCriteria;
     }
 
+    public Protocol(String title, String description, String searchString, List<Criteria> inclusionCriteria, List<Criteria> exclusionCriteria) {
+        this.title = title;
+        this.description = description;
+        this.searchString = searchString;
+        this.inclusionCriteria = inclusionCriteria;
+        this.exclusionCriteria = exclusionCriteria;
+    }
+
     public Document toJson(){
         Document document = new Document("uuid", uuid.toString());
+        document.append("title", title);
         document.append("description", description);
         document.append("searchString", searchString);
 
@@ -68,5 +81,21 @@ public class Protocol {
 
     public List<Criteria> getExclusionCriteria() {
         return exclusionCriteria;
+    }
+
+    public UUID getSystematicReviewId() {
+        return systematicReviewId;
+    }
+
+    public void setSystematicReviewId(UUID systematicReviewId) {
+        this.systematicReviewId = systematicReviewId;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }

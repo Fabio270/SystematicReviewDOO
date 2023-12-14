@@ -6,6 +6,11 @@ import java.util.UUID;
 public class QuestionPickList extends Question{
     private List<String> options;
 
+    public QuestionPickList(UUID id, UUID systematicReviewId, String description, List<String> options) {
+        super(id, systematicReviewId, description);
+        this.options = options;
+    }
+
     public QuestionPickList(UUID id, String description, List<String> options) {
         super(id, description);
         this.options = options;

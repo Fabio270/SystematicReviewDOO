@@ -11,15 +11,12 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1e90ff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.systematic.doosystematic.InitialPageController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1e90ff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.systematic.doosystematic.application.controller.InitialPageUIController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ededed" height="335.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
       <QuadCurve controlX="249.5999755859375" controlY="215.80001831054688" endX="536.0" endY="82.0" fill="#ededed" layoutX="64.0" layoutY="251.0" startX="-64.0" startY="82.00003051757812" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
       <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#e2f1ff" height="284.0" layoutX="439.0" layoutY="53.0" stroke="BLACK" strokeType="INSIDE" width="147.0" AnchorPane.leftAnchor="439.0" AnchorPane.rightAnchor="13.800000000000011" />
-      <ImageView fitHeight="34.0" fitWidth="162.0" layoutX="36.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="36.0" AnchorPane.topAnchor="53.0">
-         <image>
-            <Image url="@images/logo.png" />
-         </image>
+      <ImageView fx:id="imgLogo" fitHeight="34.0" fitWidth="162.0" layoutX="36.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="36.0" AnchorPane.topAnchor="53.0">
       </ImageView>
       <Label alignment="BASELINE_CENTER" layoutX="64.0" layoutY="87.0" prefHeight="118.0" prefWidth="270.0" text="Sincronize seu caminho pela Revisão Sistemática" textOverrun="WORD_ELLIPSIS" wrapText="true" AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="87.0">
          <font>
@@ -32,12 +29,9 @@
             <Font name="Leelawadee UI" size="14.0" />
          </font>
       </Label>
-      <Button fx:id="btnStart" contentDisplay="CENTER" layoutX="173.0" layoutY="228.0" mnemonicParsing="false" AnchorPane.leftAnchor="173.0" AnchorPane.topAnchor="228.0">
+      <Button fx:id="btnStart" onAction="#goToNewSystematicReview" contentDisplay="CENTER" layoutX="173.0" layoutY="228.0" mnemonicParsing="false" AnchorPane.leftAnchor="173.0" AnchorPane.topAnchor="228.0">
          <graphic>
-            <ImageView fx:id="btnStart" fitHeight="48.0" fitWidth="42.0">
-               <image>
-                  <Image url="@images/play-button.png" />
-               </image>
+            <ImageView fx:id="imgStart" fitHeight="48.0" fitWidth="42.0">
                <viewport>
                   <Rectangle2D />
                </viewport>
