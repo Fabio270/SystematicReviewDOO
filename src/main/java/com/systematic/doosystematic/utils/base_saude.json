@@ -1,0 +1,82 @@
+[
+   {
+      "id": 1,
+      "title": "Evolução da gripe: um estudo abrangente",
+      "resumo": "Este estudo aborda a evolução da gripe ao longo dos anos, analisando suas principais características e impacto na saúde pública.",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut velit et ligula lobortis iaculis. Quisque ac malesuada elit. Suspendisse potenti. Sed condimentum tincidunt dolor, ut vestibulum nulla pellentesque eu. Ut non ante nec nulla ullamcorper egestas. Mauris euismod sit amet justo vitae faucibus.",
+      "authors": "John Doe, Jane Smith",
+      "keywords": "gripe, vírus, epidemiologia"
+   },
+   {
+      "id": 2,
+      "title": "Abordagens terapêuticas inovadoras para tratar a gripe",
+      "resumo": "Este artigo discute as mais recentes abordagens terapêuticas no tratamento da gripe, incluindo novos medicamentos e terapias em desenvolvimento.",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut velit et ligula lobortis iaculis. Quisque ac malesuada elit. Suspendisse potenti. Sed condimentum tincidunt dolor, ut vestibulum nulla pellentesque eu. Ut non ante nec nulla ullamcorper egestas. Mauris euismod sit amet justo vitae faucibus.",
+      "authors": "Maria Silva, Robert Johnson",
+      "keywords": "gripe, tratamento, medicamentos, terapias"
+   },
+   {
+      "id": 3,
+      "title": "Prevenção da gripe: estratégias eficazes",
+      "resumo": "Este artigo apresenta estratégias eficazes para prevenir a gripe, incluindo vacinação, medidas de higiene e educação pública.",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut velit et ligula lobortis iaculis. Quisque ac malesuada elit. Suspendisse potenti. Sed condimentum tincidunt dolor, ut vestibulum nulla pellentesque eu. Ut non ante nec nulla ullamcorper egestas. Mauris euismod sit amet justo vitae faucibus.",
+      "authors": "Ana Santos, David Brown",
+      "keywords": "gripe, prevenção, vacinação, higiene"
+   },
+   {
+      "id": 4,
+      "title": "Efeitos da gripe na população idosa",
+      "resumo": "Este estudo analisa os efeitos da gripe na população idosa, incluindo os riscos, complicações e medidas de proteção adequadas.",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut velit et ligula lobortis iaculis. Quisque ac malesuada elit. Suspendisse potenti. Sed condimentum tincidunt dolor, ut vestibulum nulla pellentesque eu. Ut non ante nec nulla ullamcorper egestas. Mauris euismod sit amet justo vitae faucibus.",
+      "authors": "Pedro Lima, Emily Wilson",
+      "keywords": "gripe, população idosa, complicações, medidas de proteção"
+   },
+   {
+      "id": 5,
+      "title": "Epidemiologia da gripe: tendências recentes",
+      "resumo": "Este artigo analisa as tendências recentes na epidemiologia da gripe, incluindo a propagação geográfica e sazonalidade da doença.",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut velit et ligula lobortis iaculis. Quisque ac malesuada elit. Suspendisse potenti. Sed condimentum tincidunt dolor, ut vestibulum nulla pellentesque eu. Ut non ante nec nulla ullamcorper egestas. Mauris euismod sit amet justo vitae faucibus.",
+      "authors": "Laura Garcia, Michael Thompson",
+      "keywords": "gripe, epidemiologia, propagação, sazonalidade"
+   },
+   {
+      "id": 6,
+      "title": "Impacto econômico da gripe na sociedade",
+      "resumo": "Este estudo avalia o impacto econômico da gripe na sociedade, incluindo os custos diretos e indiretos associados à doença e às medidas de controle.",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut velit et ligula lobortis iaculis. Quisque ac malesuada elit. Suspendisse potenti. Sed condimentum tincidunt dolor, ut vestibulum nulla pellentesque eu. Ut non ante nec nulla ullamcorper egestas. Mauris euismod sit amet justo vitae faucibus.",
+      "authors": "Gabriel Fernandes, Sarah Johnson",
+      "keywords": "gripe, impacto econômico, custos, controle"
+   },
+   {
+      "id": 7,
+      "title": "Diagnóstico precoce da gripe: avanços e desafios",
+      "resumo": "Este artigo discute os avanços recentes no diagnóstico precoce da gripe, bem como os desafios enfrentados na detecção rápida e precisa da doença.",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut velit et ligula lobortis iaculis. Quisque ac malesuada elit. Suspendisse potenti. Sed condimentum tincidunt dolor, ut vestibulum nulla pellentesque eu. Ut non ante nec nulla ullamcorper egestas. Mauris euismod sit amet justo vitae faucibus.",
+      "authors": "Ricardo Oliveira, Emma Davis",
+      "keywords": "gripe, diagnóstico precoce, avanços, desafios"
+   },
+   {
+      "id": 8,
+      "title": "Prevalência da gripe em diferentes faixas etárias",
+      "resumo": "Este estudo investiga a prevalência da gripe em diferentes faixas etárias, analisando a suscetibilidade e os impactos na saúde de diferentes grupos populacionais.",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut velit et ligula lobortis iaculis. Quisque ac malesuada elit. Suspendisse potenti. Sed condimentum tincidunt dolor, ut vestibulum nulla pellentesque eu. Ut non ante nec nulla ullamcorper egestas. Mauris euismod sit amet justo vitae faucibus.",
+      "authors": "Carolina Santos, James Miller",
+      "keywords": "gripe, prevalência, faixas etárias, suscetibilidade"
+   },
+   {
+      "id": 9,
+      "title": "Vacinação contra a gripe: importância e eficácia",
+      "resumo": "Este artigo aborda a importância da vacinação contra a gripe, discutindo sua eficácia na prevenção da doença e seus benefícios para a saúde pública.",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut velit et ligula lobortis iaculis. Quisque ac malesuada elit. Suspendisse potenti. Sed condimentum tincidunt dolor, ut vestibulum nulla pellentesque eu. Ut non ante nec nulla ullamcorper egestas. Mauris euismod sit amet justo vitae faucibus.",
+      "authors": "Mariana Silva, Andrew Wilson",
+      "keywords": "gripe, vacinação, importância, eficácia"
+   },
+   {
+      "id": 10,
+      "title": "Gripe em crianças: sintomas e cuidados",
+      "resumo": "Este estudo examina os sintomas da gripe em crianças, destacando os cuidados adequados para prevenção e tratamento da doença em uma faixa etária vulnerável.",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut velit et ligula lobortis iaculis. Quisque ac malesuada elit. Suspendisse potenti. Sed condimentum tincidunt dolor, ut vestibulum nulla pellentesque eu. Ut non ante nec nulla ullamcorper egestas. Mauris euismod sit amet justo vitae faucibus.",
+      "authors": "Isabela Oliveira, Benjamin Thompson",
+      "keywords": "gripe, crianças, sintomas, cuidados"
+   }
+]
